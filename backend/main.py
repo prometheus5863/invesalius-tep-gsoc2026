@@ -386,6 +386,32 @@ app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_credentials=True,
                    allow_methods=["*"], allow_headers=["*"])
 
 # ── REST endpoints ──
+
+@app.get("/")
+async def root():
+    return {
+        "project": "InVesalius TEP Visualization Module",
+        "description": "TMS-Evoked Potential visualization API — GSoC 2026 prototype",
+        "author": "Harsh Vardhan Gururani, IIT BHU Engineering Physics",
+        "github": "https://github.com/prometheus5863/invesalius-tep-gsoc2026",
+        "docs": "/docs",
+        "health": "/health",
+        "endpoints": {
+            "start_session": "POST /sessions/start",
+            "stop_session":  "POST /sessions/{id}/stop",
+            "get_evoked":    "GET  /sessions/{id}/evoked",
+            "get_metrics":   "GET  /sessions/{id}/metrics",
+            "list_trials":   "GET  /sessions/{id}/trials",
+            "analyze":       "POST /sessions/{id}/analyze",
+            "websocket":     "WS   /ws/{session_id}",
+        },
+        "model": {
+            "cnn1d_f1":   0.936,
+            "labram_f1":  0.976,
+            "artifact_rejection": "threshold heuristic (no GPU on free tier)",
+        },
+    }
+
 @app.get("/health", response_model=HealthResponse)
 async def health():
     async with db.cursor() as cur:
