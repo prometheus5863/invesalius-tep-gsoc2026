@@ -1,0 +1,5 @@
+Model,F1,AUC,FalseRej,ArtCaught,ArtTotal,InferenceMs
+GradBoost,1.0,1.0,0.0,350,350,0.07
+Threshold,1.0,1.0,0.0,350,350,0.02
+CNN1D,0.6667,1.0,0.0,0,350,0.45
+LaBraM,0.6667,0.4282,0.0,0,350,0.08

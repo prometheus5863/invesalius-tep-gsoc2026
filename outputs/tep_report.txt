@@ -1,0 +1,23 @@
+CLINICAL TEP INTERPRETATION
+============================================
+
+Motor Cortex (M1) TMS-EEG Recording
+
+Peak Metrics (Cz electrode):
+  N15     lat=  23.0 ms  amp= -0.107 µV  [DELAYED, REDUCED]
+  P30     lat=  33.0 ms  amp= +0.085 µV  [REDUCED]
+  N45     lat=  34.0 ms  amp= -0.055 µV  [REDUCED]
+  P60     lat=  75.0 ms  amp= +0.108 µV  [DELAYED, REDUCED]
+  N100    lat= 103.0 ms  amp= -0.075 µV  [REDUCED]
+
+Alpha power ratio (post/pre): 0.500
+
+Interpretation:
+The N45 component is within normative range (34.0 ms), consistent with intact GABAergic inhibition in M1.
+The reduced N45 amplitude (-0.055 µV) indicates diminished GABA-B receptor-mediated inhibition.
+The N100 amplitude is attenuated (-0.075 µV), which may reflect changes in long-range cortical inhibitory networks.
+Post-stimulus alpha suppression (ratio=0.50) reflects enhanced cortical excitability following M1 stimulation.
+
+Clinical flags: Abnormalities: N15 delayed (23.0ms); N15 amplitude reduced (-0.11µV); P30 amplitude reduced (0.09µV); N45 amplitude reduced (-0.06µV); P60 delayed (75.0ms); P60 amplitude reduced (0.11µV); N100 amplitude reduced (-0.07µV)
+
+Artifact model: GradBoost (F1=0.936)
